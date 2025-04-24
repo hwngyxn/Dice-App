@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice App</title>
+    <script src="JS/script.js"></script>
 </head>
 <body>
+    <h2>D&D Dice Roller</h2>
+    <p>Roll Dice</p>
+    <form>
+        <input type="checkbox" id="D4" name="4-sided die" value="D4">
+        <label for="D4">D4</label><br>
+        <input type="checkbox" id="D6" name="6-sided die" value="D6" checked>
+        <label for="D6">D6</label><br>
+        <input type="checkbox" id="D8" name="8-sided die" value="D8">
+        <label for="D8">D8</label><br>
+        <input type="reset" value="Reset">
+    </form>
+    <p>You rolled: </p>
+    <h1 id="result"></h1>
+<div>
+    <button onclick="rollDiceAndDisplay()">Roll the Dice</button>
     
+</div>
 </body>
 </html>
