@@ -5,24 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice App</title>
     <script src="JS/script.js"></script>
+    <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-    <h2>D&D Dice Roller</h2>
-    <p>Roll Dice</p>
-    <form>
-        <input type="checkbox" id="D4" name="4-sided die" value="D4">
-        <label for="D4">D4</label><br>
-        <input type="checkbox" id="D6" name="6-sided die" value="D6" checked>
-        <label for="D6">D6</label><br>
-        <input type="checkbox" id="D8" name="8-sided die" value="D8">
-        <label for="D8">D8</label><br>
-        <input type="reset" value="Reset">
-    </form>
-    <p>You rolled: </p>
-    <h1 id="result"></h1>
-<div>
-    <button onclick="rollDiceAndDisplay()">Roll the Dice</button>
-    
-</div>
+    <div class="main-container">
+        <h2>D&D Dice Roller</h2>
+        <p>Roll Dice</p>
+        <form class="dice-picker" action="">
+            <div id="dice-picker-checkbox">
+                    <label class="checkbox-container" for="D4">D4
+                        <input type="checkbox" id="D4" name="4-sided die" value="D4">
+                    </label>
+                    <label class="checkbox-container" for="D6">D6
+                        <input type="checkbox" id="D6" name="6-sided die" value="D6">
+                    </label>
+                    <label class="checkbox-container" for="D8">D8
+                        <input type="checkbox" id="D8" name="8-sided die" value="D8">
+                    </label>
+            </div>
+            <div class="reset-container">
+                <label for="reset">Reset Dice</label>
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+        <div class="result-container">
+            <p>You rolled: </p>
+            <h1 id="result">No dice selected.</h1>
+            <button id="roll-dice-button" onclick="rollDiceAndDisplay()">Roll the Dice</button>
+        </div>
+    </div>
 </body>
 </html>
