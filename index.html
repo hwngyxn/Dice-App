@@ -11,39 +11,44 @@
     <div class="main-container">
         <h2>D&D Dice Roller</h2>
         <p>Roll Dice</p>
+
         <form class="dice-picker" action="">
-            <div id="dice-picker-checkbox">
-                    <label class="checkbox-container" for="D4">D4
-                        <input type="checkbox" id="D4" name="4-sided die" value="D4">
-                    </label>
-                    <label class="checkbox-container" for="D6">D6
-                        <input type="checkbox" id="D6" name="6-sided die" value="D6">
-                    </label>
-                    <label class="checkbox-container" for="D8">D8
-                        <input type="checkbox" id="D8" name="8-sided die" value="D8">
-                    </label>
-                    <label class="checkbox-container" for="D10">D10
-                        <input type="checkbox" id="D10" name="10-sided die" value="D10">
-                    </label>
-                    <label class="checkbox-container" for="D12">D12
-                        <input type="checkbox" id="D12" name="12-sided die" value="D12">
-                    </label>
-                    <label class="checkbox-container" for="D20">D20
-                        <input type="checkbox" id="D20" name="20-sided die" value="D20">
-                    </label>
-                    <label class="checkbox-container" for="D%">D%
-                        <input type="checkbox" id="D%" name="percentile die" value="D%">
-                    </label>
-            </div>
+
+            <fieldset>
+                <legend>Select Dice Types</legend>
+                <label>D4
+                    <input type="checkbox" name="dice" value="D4" />
+                </label>
+                <label>D6
+                    <input type="checkbox" name="dice" value="D6" />
+                </label>
+                <label>D8
+                    <input type="checkbox" name="dice" value="D8" />
+                </label>
+                <label>D10
+                    <input type="checkbox" name="dice" value="D10" />
+                </label>
+                <label>D12
+                    <input type="checkbox" name="dice" value="D12" />
+                </label>
+                <label>D20
+                    <input type="checkbox" name="dice" value="D20" />
+                </label>
+                <label>D%
+                    <input type="checkbox" name="dice" value="D%" />
+                </label>
+            </fieldset>
+
             <div class="reset-container">
-                <label for="reset">Reset Dice</label>
-                <input type="reset" value="Reset">
+                <label for="reset-button">Reset Dice</label>
+                <button type="reset" id="reset-button">Reset</button>
             </div>
         </form>
+        
         <div class="dice-result-container">
             <p>You rolled: </p>
             <h1 id="result">No dice selected.</h1>
-            <button id="roll-dice-button" onclick="rollDiceAndDisplay()">Roll the Dice</button>
+            <button id="button" onclick="rollDiceAndDisplay()">Roll the Dice</button>
         </div>
     </div>
 </body>
