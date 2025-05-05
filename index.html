@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice App</title>
     <script src="JS/script.js"></script>
-    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="CSS/stylesheet.css">
 </head>
 <body>
     <div class="main-container">
@@ -22,13 +22,25 @@
                     <label class="checkbox-container" for="D8">D8
                         <input type="checkbox" id="D8" name="8-sided die" value="D8">
                     </label>
+                    <label class="checkbox-container" for="D10">D10
+                        <input type="checkbox" id="D10" name="10-sided die" value="D10">
+                    </label>
+                    <label class="checkbox-container" for="D12">D12
+                        <input type="checkbox" id="D12" name="12-sided die" value="D12">
+                    </label>
+                    <label class="checkbox-container" for="D20">D20
+                        <input type="checkbox" id="D20" name="20-sided die" value="D20">
+                    </label>
+                    <label class="checkbox-container" for="D%">D%
+                        <input type="checkbox" id="D%" name="percentile die" value="D%">
+                    </label>
             </div>
             <div class="reset-container">
                 <label for="reset">Reset Dice</label>
                 <input type="reset" value="Reset">
             </div>
         </form>
-        <div class="result-container">
+        <div class="dice-result-container">
             <p>You rolled: </p>
             <h1 id="result">No dice selected.</h1>
             <button id="roll-dice-button" onclick="rollDiceAndDisplay()">Roll the Dice</button>
