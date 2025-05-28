@@ -8,10 +8,10 @@ body {
     color: white;
     text-align: center;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: auto;
-    flex-direction: column;
     gap: 32px;
 }
 
@@ -23,54 +23,28 @@ body {
     width: 100%;
 }
 
-form.dice-picker {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-}
-
-form.dice-picker > fieldset {
+fieldset {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
     padding: 12px;
     border-radius: 8px;
+    border: 1px solid #444;
+    background: #222;
 }
 
-form.dice-picker > fieldset > label {
+#dice-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: large;
-    gap: 4px;
-}
-
-form.dice-picker > fieldset > legend {
-    text-align: center;
-    margin-bottom: 8px;
-}
-
-.reset-container {
-    display: flex;
+    flex-direction: row;
+    gap: 1rem;
     justify-content: center;
     align-items: center;
-    gap: 4px;
-    width: 100%;
-}
-
-.dice-result-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 10vh;
+    min-height: 40px;
 }
 
 .dice-result-container > button,
-.reset-container > button {
+#roll-all {
     display: flex;
     padding: 10px 40px;
     justify-content: center;
@@ -82,4 +56,13 @@ form.dice-picker > fieldset > legend {
     cursor: pointer;
     border: none;
     font-weight: bold;
+}
+
+.dice-result {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: #333;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
 }
