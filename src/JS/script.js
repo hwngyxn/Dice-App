@@ -65,7 +65,7 @@ class DiceController {
         // Add dice buttons in the UI
         document.querySelectorAll("button[id^='d']").forEach(button => {
             button.addEventListener("click", () => {
-                const sides = parseInt(button.id.substring(1));
+                const sides = Number(button.dataset.sides);
                 const dice = new Dice(sides);
                 this.tray.addDice(dice);
                 const value = dice.roll();
